@@ -2,32 +2,32 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: rgba(12,23,255,0.1);
-    overflow: hidden;
+
 }
 
 .container{
     background: linear-gradient(#292a3038 .1rem, transparent .1rem),
     linear-gradient(90deg, #292a303a .1rem, transparent .1rem);
-    position: fixed;
     padding: 10px;
     width: 100%;
-    height: 100vh;
     background-size: 4rem 4rem;
 }
 .main-section{
     display: flex;
     align-items: center;
     height: 100%;
+    gap: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+.cards {
+    width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   place-items: center;
    gap: 20px;
 }
 
-.cards{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 75%;
-}
 
 .card{
     height: 200px;
@@ -36,6 +36,8 @@ body{
     backdrop-filter: blur(10px) saturate(200%);
     background: rgba(12,23,255,0.1);
     border-radius: 12px;
+    padding: 10px;
+     transition: 1s ease-in-out;
 }
 
 .edit{
@@ -65,6 +67,7 @@ body{
 }
 .colors{
     margin-top: 20px;
+    transition: 1s ease-in-out;
 }
 .color{
     height: 30px;
@@ -79,6 +82,16 @@ body{
      border: 2px solid rgba(0, 255, 221, .4); /* Darken border slightly when hovered */
     box-shadow: 0 0 8px rgba(0, 255, 221, 0.493); /* Slight shadow on hover */
 }
+.card svg{
+    height: 20px;
+    cursor: pointer;
+}
+.card svg:hover{
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all .5s ease-in-out;
+}
+
 
 
 @media screen and (max-width:896px) {
@@ -98,3 +111,4 @@ body{
     width: 20px;
     }
 }
+
