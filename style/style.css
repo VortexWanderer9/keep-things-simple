@@ -25,6 +25,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     width: 75%;
 }
 
@@ -74,7 +75,26 @@ body{
     cursor: pointer;
 }
 
-.color:hover{
-    border: 2px solid #aaa; /* Darken border slightly when hovered */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+.color.add{
+     border: 2px solid rgba(0, 255, 221, .4); /* Darken border slightly when hovered */
+    box-shadow: 0 0 8px rgba(0, 255, 221, 0.493); /* Slight shadow on hover */
+}
+
+
+@media screen and (max-width:896px) {
+    .main-section{
+        flex-direction: column;
+
+        
+    }
+    .edit{
+        transform: translateY(-60px) rotate(90deg);
+        width: 100px;
+        height: auto;
+        
+    }
+    .color{
+    height: 20px;
+    width: 20px;
+    }
 }
