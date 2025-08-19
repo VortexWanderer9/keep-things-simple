@@ -37,9 +37,11 @@ body{
     background: rgba(12,23,255,0.1);
     border-radius: 12px;
     padding: 10px;
-     transition: 1s ease-in-out;
+     position: fixed;
 }
-
+.edit{
+    background: rgba(255, 12, 32, 0.2);
+}
 .edit{
     height: 500px;
     width: 150px;
@@ -74,13 +76,16 @@ body{
     width: 30px;
     margin-top: 20px;
     border-radius: 50%;
-    border: 1px solid #0000000c;
+    border: 2px solid #0000006e;
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
 .color.add{
-     border: 2px solid rgba(0, 255, 221, .4); /* Darken border slightly when hovered */
-    box-shadow: 0 0 8px rgba(0, 255, 221, 0.493); /* Slight shadow on hover */
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 12, 32, 0.4);
+
 }
 .card svg{
     height: 20px;
@@ -88,8 +93,12 @@ body{
 }
 .card svg:hover{
     opacity: 0.4;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition: all .5s ease-in-out;
+}
+
+.card p{
+    border-bottom: 2px solid rgba(12,23,255,0.2);
 }
 
 
