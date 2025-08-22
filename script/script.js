@@ -47,13 +47,36 @@ button.addEventListener('mousedown', () =>{
     const closeButton = div.querySelector('.close svg');
     closeButton.addEventListener('mousedown', () => {
     div.remove();
+
 });
+const input = div.querySelector('.input');
+div.addEventListener('mousedown', (e) =>{
+    e.stopPropagation(); // Prevent mousedown from bubbling up
+    div.focused = true;
+})
+window.addEventListener('keydown', (e) =>{
+  if(div.focused && e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    input.textContent += e.key;
+  }
+  if(div.focused && e.key === 'Enter') {
+    input.textContent += '\n'; // Add a new line on Enter
+  }
+  // Optional: handle backspace
+  if (div.focused && e.key === 'Backspace') {
+    input.textContent = input.textContent.slice(0, -1);
+    e.preventDefault();
+  }
+});
+document.addEventListener('mousedown', () =>{
+  div.focused = false;
+});
+
 makeCardDraggable(div)
 });
 
 
 
-// Make the card draggable
+// Make the card draggableS
 function makeCardDraggable(element) {
     element.style.position = 'absolute';
     element.addEventListener('mousedown', mouseDown);

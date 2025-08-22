@@ -38,6 +38,7 @@ body{
     border-radius: 12px;
     padding: 10px;
      position: fixed;
+     overflow: hidden;
 }
 .edit{
     background: rgba(255, 12, 32, 0.2);
