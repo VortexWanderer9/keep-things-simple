@@ -101,6 +101,12 @@ body{
 .card p{
     border-bottom: 2px solid rgba(12,23,255,0.2);
 }
+.card span{
+    font-size: 1.2rem;
+    color: rgba(12,23,255,0.8);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
 
 
 
